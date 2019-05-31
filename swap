@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+require 'colored'
+
+swapthis = ARGV[0]
+swapthat = ARGV[1]
+
+abort("\n usage: #{__FILE__} <this> <that> \n\n") unless ARGV.size == 2
+
+Dir.glob("./*").each do |before|
+  after = before.gsub("#{swapthis}", "#{swapthat}")
+  next if %w(. .. before).include?(after) || File.directory?(before)
+  File.rename(before, after)
+  puts "#{before[2..-1].red} -> #{after[2..-1].green}"
+end

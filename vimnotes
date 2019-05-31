@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+
+notes = <<HEREDOC
+
+Vim Notes - 
+
+Ctrl + P -  Fuzzy Finder
+\\nt - Nerd Tree
+\\nf - Nert Tree current file
+\\be - Switch buffer
+\\TT - tagbar
+\\TS - remove trailing spaces
+\\a - Ack! (silver searcher)
+:Bsgrep -  search open buffer
+gS - Split method into different lines
+gJ - Join method
+
+HEREDOC
+
+puts notes

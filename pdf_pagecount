@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require 'pdf-reader'
+
+abort( "No input pdf file selected") if ARGV[0].nil?
+
+inputfile = ARGV[0]
+
+reader = PDF::Reader.new(inputfile)
+puts reader.page_count

@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+def celsius_fahrenheit(c)
+    c * 9 / 5 + 32
+end
+
+puts 'Enter Celsius:'
+c = gets.to_f
+puts "#{celsius_fahrenheit(c)} degrees fahrenheit."
+

@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require 'colored'
+
+Dir.glob("./*").each do |f|
+  after = f.gsub("_", " ")
+  next if %w( . .. after ).include?(f) || File.directory?(f)
+  puts "moving #{f[2..-1].yellow} -> #{after[2..-1].green}"
+  File.rename(f, after)
+end
+
